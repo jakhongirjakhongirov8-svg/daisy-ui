@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="flex items-center gap-[500px] px-[50px]">
+                <div class="">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_Edb69zRvo3pjpJcR_5333kr5dhgTWcwJqcfq1oW_Uw&s=10"
+                        alt="">
+                    <div class="avatar">
+                        <div class="ring-primary ring-offset-base-100 w-24 rounded-full ring-2 ring-offset-2">
+                            <img alt="Tailwind-CSS-Avatar-component"
+                                src="https://img.daisyui.com/images/profile/demo/spiderperson@192.webp" />
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-[30px]">
+
+                    <label class="swap">
+                        <!-- this hidden checkbox controls the state -->
+                        <input type="checkbox" />
+
+                        <!-- volume on icon -->
+                        <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.84 14,18.7V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16C15.5,15.29 16.5,13.76 16.5,12M3,9V15H7L12,20V4L7,9H3Z" />
+                        </svg>
+
+                        <!-- volume off icon -->
+                        <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                            viewBox="0 0 24 24">
+                            <path
+                                d="M3,9H7L12,4V20L7,15H3V9M16.59,12L14,9.41L15.41,8L18,10.59L20.59,8L22,9.41L19.41,12L22,14.59L20.59,16L18,13.41L15.41,16L14,14.59L16.59,12Z" />
+                        </svg>
+                    </label>
+                    <label class="btn btn-circle swap swap-rotate">
+                        <input type="checkbox" />
+
+                        <svg class="swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                            viewBox="0 0 512 512">
+                            <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
+                        </svg>
+
+                        <svg class="swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+                            viewBox="0 0 512 512">
+                            <polygon
+                                points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49" />
+                        </svg>
+                    </label>
+                    <button class="btn btn-soft btn-success">Success</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="flex items-center justify-center">
+                <!-- The button's popovertarget attribute points to the modal's ID. ID must be unique for each modal -->
+                <!-- The button's popovertarget attribute points to the modal's ID. ID must be unique for each modal -->
+                <button class="btn" popovertarget="my-modal-2">Open</button>
+
+                <div class="modal" id="my-modal-2" popover>
+                    <div class="modal-box">
+                        <h3 class="font-bold text-lg">Kredit!</h3>
+                        <p class="py-4">Kreditini tola tvar</p>
+                    </div>
+                    <div class="modal-backdrop">
+                        <button popovertarget="my-modal-2" popovertargetaction="hide">close</button>
+                    </div>
+                </div>
+                <div class="flex px-[200px]">
+                    <div class="flex w-52 flex-col gap-4">
+                        <div class="skeleton h-32 w-full"></div>
+                        <span class="skeleton skeleton-text">AI is thinking harder...</span>
+                        <div class="skeleton h-4 w-full"></div>
+                        <div class="skeleton h-4 w-full"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-between py-[100px]">
+                <div class="hover-3d">
+                    <!-- content -->
+                    <figure class="max-w-100 rounded-2xl">
+                        <img src="https://img.daisyui.com/images/stock/creditcard.webp" alt="3D card" />
+                    </figure>
+                    <!-- 8 empty divs needed for the 3D effect -->
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="card card-sm bg-base-200 max-w-60 shadow">
+                    <figure class="hover-gallery">
+                        <img alt="Tailwind CSS image hover gallery"
+                            src="https://img.daisyui.com/images/stock/daisyui-hat-1.webp" />
+                        <img alt="Tailwind CSS image hover gallery"
+                            src="https://img.daisyui.com/images/stock/daisyui-hat-2.webp" />
+                        <img alt="Tailwind CSS image hover gallery"
+                            src="https://img.daisyui.com/images/stock/daisyui-hat-3.webp" />
+                        <img alt="Tailwind CSS image hover gallery"
+                            src="https://img.daisyui.com/images/stock/daisyui-hat-4.webp" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title flex justify-between">
+                            daisyUI Hat
+                            <span class="font-normal">$25.000</span>
+                        </h2>
+                        <p>$25.000 KREDITI BOR BU TVARRI</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex">
+            <div class="">
+                <div class="card card-dash bg-base-100 w-96">
+                    <div class="card-body">
+                        <h2 class="card-title">Card Title</h2>
+                        <p>A card component has a figure, a body part, and inside body there are title and actions parts
+                        </p>
+                        <div class="card-actions justify-end">
+                            <button class="btn btn-primary">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex">
+                    <div class="grid auto-cols-max grid-flow-col gap-5 text-center">
+                        <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
+                            <span class="countdown font-mono text-5xl">
+                                <span style="--value:15;" aria-live="polite" aria-label="15">15</span>
+                            </span>
+                            days
+                        </div>
+                        <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
+                            <span class="countdown font-mono text-5xl">
+                                <span style="--value:10;" aria-live="polite" aria-label="10">10</span>
+                            </span>
+                            hours
+                        </div>
+                        <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
+                            <span class="countdown font-mono text-5xl">
+                                <span style="--value:24;" aria-live="polite" aria-label="24">24</span>
+                            </span>
+                            min
+                        </div>
+                        <div class="bg-neutral rounded-box text-neutral-content flex flex-col p-2">
+                            <span class="countdown font-mono text-5xl">
+                                <span style="--value:59;" aria-live="polite" aria-label="59">59</span>
+                            </span>
+                            sec
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="">
+                <ul class="list bg-base-100 rounded-box shadow-md">
+
+                    <li class="p-4 pb-2 text-xs opacity-60 tracking-wide">Most played songs this week</li>
+
+                    <li class="list-row">
+                        <div><img class="size-10 rounded-box" alt="Tailwind CSS list item"
+                                src="https://img.daisyui.com/images/profile/demo/1@94.webp" /></div>
+                        <div>
+                            <div>Dio Lupa</div>
+                            <div class="text-xs uppercase font-semibold opacity-60">Remaining Reason</div>
+                        </div>
+                        <p class="list-col-wrap text-xs">
+                            "Remaining Reason" became an instant hit, praised for its haunting sound and emotional
+                            depth. A viral performance brought it widespread recognition, making it one of Dio Lupa’s
+                            most iconic tracks.
+                        </p>
+                        <button class="btn btn-square btn-ghost">
+                            <svg aria-label="Play" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none"
+                                    stroke="currentColor">
+                                    <path d="M6 3L20 12 6 21 6 3z"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="btn btn-square btn-ghost">
+                            <svg aria-label="Favorite" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none"
+                                    stroke="currentColor">
+                                    <path
+                                        d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </li>
+
+                    <li class="list-row">
+                        <div><img class="size-10 rounded-box" alt="Tailwind CSS list item"
+                                src="https://img.daisyui.com/images/profile/demo/4@94.webp" /></div>
+                        <div>
+                            <div>Ellie Beilish</div>
+                            <div class="text-xs uppercase font-semibold opacity-60">Bears of a fever</div>
+                        </div>
+                        <p class="list-col-wrap text-xs">
+                            "Bears of a Fever" captivated audiences with its intense energy and mysterious lyrics. Its
+                            popularity skyrocketed after fans shared it widely online, earning Ellie critical acclaim.
+                        </p>
+                        <button class="btn btn-square btn-ghost">
+                            <svg aria-label="Play" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none"
+                                    stroke="currentColor">
+                                    <path d="M6 3L20 12 6 21 6 3z"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="btn btn-square btn-ghost">
+                            <svg aria-label="Favorite" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none"
+                                    stroke="currentColor">
+                                    <path
+                                        d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </li>
+
+                    <li class="list-row">
+                        <div><img class="size-10 rounded-box" alt="Tailwind CSS list item"
+                                src="https://img.daisyui.com/images/profile/demo/3@94.webp" /></div>
+                        <div>
+                            <div>Sabrino Gardener</div>
+                            <div class="text-xs uppercase font-semibold opacity-60">Cappuccino</div>
+                        </div>
+                        <p class="list-col-wrap text-xs">
+                            "Cappuccino" quickly gained attention for its smooth melody and relatable themes. The song’s
+                            success propelled Sabrino into the spotlight, solidifying their status as a rising star.
+                        </p>
+                        <button class="btn btn-square btn-ghost">
+                            <svg aria-label="Play" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none"
+                                    stroke="currentColor">
+                                    <path d="M6 3L20 12 6 21 6 3z"></path>
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="btn btn-square btn-ghost">
+                            <svg aria-label="Favorite" class="size-[1.2em]" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none"
+                                    stroke="currentColor">
+                                    <path
+                                        d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z">
+                                    </path>
+                                </g>
+                            </svg>
+                        </button>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="">
+                <figure class="diff aspect-16/9" tabindex="0">
+                    <div class="diff-item-1" role="img" tabindex="0">
+                        <div class="bg-primary text-primary-content grid place-content-center text-9xl font-black">
+                            DAISY
+                        </div>
+                    </div>
+                    <div class="diff-item-2" role="img">
+                        <div class="bg-base-200 grid place-content-center text-9xl font-black">DAISY</div>
+                    </div>
+                    <div class="diff-resizer"></div>
+                </figure>
+                <div class="py-[50px]">
+                    <div class="flex-col-reverse">
+                <div class="aura aura-rainbow">
+  <div class="card bg-base-100">
+    <div class="card-body">
+      <p>This card has rainbow aura</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="mt-[50px]">
+<div class="aura aura-rainbow">
+  <div class="card w-96 bg-base-100 shadow-sm">
+    <div class="card-body">
+      <span class="badge badge-xs badge-warning">Most Popular</span>
+      <div class="flex justify-between">
+        <h2 class="text-3xl font-bold">Premium</h2>
+        <span class="text-xl">$29/mo</span>
+      </div>
+      <ul class="mt-6 flex flex-col gap-2 text-xs">
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+          <span>High-resolution image generation</span>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+          <span>Customizable style templates</span>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+          <span>Batch processing capabilities</span>
+        </li>
+        <li>
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-success" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+          <span>AI-driven image enhancements</span>
+        </li>
+        <li class="opacity-50">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-base-content/50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+          <span class="line-through">Seamless cloud integration</span>
+        </li>
+        <li class="opacity-50">
+          <svg xmlns="http://www.w3.org/2000/svg" class="size-4 me-2 inline-block text-base-content/50" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+          <span class="line-through">Real-time collaboration tools</span>
+        </li>
+      </ul>
+      <div class="mt-6">
+        <button class="btn btn-primary btn-block">Subscribe</button>
+      </div>
+    </div>
+        </div>
+        </div>
+    </div>
+            </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
